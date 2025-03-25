@@ -9,5 +9,12 @@ namespace CoreWebServer.Controllers
     public class UserController : ControllerBase
     {
         private static List<User> _users = new List<User>();
+
+        [HttpGet]
+        public ActionResult<IEnumerable<User>> GetUsers()
+        {
+            return Ok(_users);
+        }
+
     }
 }
