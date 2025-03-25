@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using CoreWebServer.Models;
 
 namespace CoreWebServer.Controllers
 {
@@ -7,5 +8,6 @@ namespace CoreWebServer.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
+        private static List<User> _users = new List<User>();
     }
 }
