@@ -4,3 +4,33 @@ GET {{CoreWebServer_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+
+GET {{CoreWebServer_HostAddress}}/api/user
+Accept: application/json
+
+###
+GET {{CoreWebServer_HostAddress}}/api/user/1
+Accept: application/json
+
+###
+POST {{CoreWebServer_HostAddress}}/api/user
+Content-Type: application/json
+{
+  "Name": "New User",
+  "Email": "newbie@b.com",
+  "Average": 29.98
+}
+###
+
+PUT {{CoreWebServer_HostAddress}}/api/user/2
+Content-Type: application/json
+{
+  "Id": 2,
+  "Name": "2modify",
+  "Email": "2modify@c.com",
+  "Average": 222.222
+}
+###
+
+DELETE {{CoreWebServer_HostAddress}}/api/user/1
+###
